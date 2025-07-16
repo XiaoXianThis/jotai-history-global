@@ -20,6 +20,24 @@
 - **性能**: 典型应用速度提升 5-20 倍，大型应用可提升至 100 倍
 - **效率**: 使用 O(1) 查找代替 O(n) 查找原子
 
+## 前置配置
+安装
+```shell
+  npm i jotai-history-global
+```
+配置 Provider
+```tsx
+// 导入
+import {Provider} from "jotai";
+import { historyStore } from 'jotai-history-global';
+
+// 使用 Provider 包裹 App
+// 并设置 store={historyStore}
+<Provider store={historyStore}>
+  <App />
+</Provider>
+```
+
 ## 基本用法
 
 ### 1. 创建带历史记录的原子

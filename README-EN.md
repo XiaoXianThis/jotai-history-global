@@ -19,6 +19,25 @@ Lightweight global undo/redo extension for Jotai.
 - **Performance**: 5-20x faster for typical applications, up to 100x for large-scale apps
 - **Efficiency**: O(1) lookups instead of O(n) for finding atoms
 
+
+## Prerequisites
+Installation
+```shell
+  npm i jotai-history-global
+```
+Configure Provider
+```tsx
+// Import
+import {Provider} from "jotai";
+import { historyStore } from 'jotai-history-global';
+
+// Wrap your App with Provider
+// and set store={historyStore}
+<Provider store={historyStore}>
+  <App />
+</Provider>
+```
+
 ## Basic Usage
 
 ### 1. Create atoms with history
